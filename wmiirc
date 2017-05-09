@@ -1,0 +1,10 @@
+#!/bin/sh
+
+eval `gnome-keyring-daemon | sed 's/^/export /'`
+
+wihack -tags '{sys}' urxvt -e ~/.wmii/wmiirc_python &
+sleep .1
+wihack -tags '{sys}' urxvt &
+wmiir xwrite /ctl view net
+wmiir xwrite /ctl fontpad 0 0 -1 -1
+sleep .5
